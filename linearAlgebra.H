@@ -13,6 +13,7 @@
  * initializeRandomUniform - initializes given array with random values
             derived from uniform distribution within given range.
  * printVector             - prints vector in space-separated form on screen
+ * linSpace                - equilvalent to np.linspace
 -----------------------------------------------------------------------------*/
 
 // preprocessor directives
@@ -290,6 +291,23 @@ void powerIterationFunction(double* A, unsigned short nSize, double tolerance,
 // sign function---------------------------------------------------------------
 template <typename T> int sign(T val) {
     return (T(0) < val) - (val < T(0));
+}
+
+// linSpace function-----------------------------------------------------------
+template <typename T> void linSpace(T* A, int N, T minVal, T maxVal){
+
+    /* Input description
+     * <type T>* A   - starting address of the input vector
+     * int N - no. of rows in the vector
+     * <type T> minVal - minimum value to be in the array
+     * <type T> maxVal - maximum value to be in the array
+     */
+
+    A[0] = minVal;
+    T dA = (maxVal-minVal)/(N-1);
+    for(int i=1; i<N; i++){
+        A[i] = A[i-1]+dA;
+    }
 }
 
 /*---------------------------------------------------------------------------*/
