@@ -310,4 +310,16 @@ template <typename T> void linSpace(T* A, int N, T minVal, T maxVal){
     }
 }
 
+// factorial of a number function----------------------------------------------
+long long factorial(long long val){
+
+    /* Input description
+     * int val - number for computing factorial
+     */
+    if (val==0 || val==1)
+        return 1;
+    else
+        return val*factorial(val-1);
+}
+
 /*---------------------------------------------------------------------------*/
