@@ -14,6 +14,7 @@
             derived from uniform distribution within given range.
  * printVector             - prints vector in space-separated form on screen
  * linSpace                - equilvalent to np.linspace
+ * factorial               - factorial of a given number
 -----------------------------------------------------------------------------*/
 
 // preprocessor directives
